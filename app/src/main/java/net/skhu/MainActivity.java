@@ -21,31 +21,32 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    @Override public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_signUp) {
-            Toast.makeText(this, "회원가입 메뉴로 이동", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, SignupActivity.class);
             startActivity(intent);
             return true;
         } else if (id == R.id.action_memo) {
-            Toast.makeText(this, "메모장 메뉴 클릭", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, MemoActivity.class);
             startActivity(intent);
             return true;
         } else if (id == R.id.action_buttons) {
-            Toast.makeText(this, "버튼 메뉴 클릭", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, ButtonsActivity.class);
             startActivity(intent);
             return true;
         } else if (id == R.id.action_checkboxes) {
-            Toast.makeText(this, "체크박스 메뉴 클릭", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, CheckboxesActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_spinners) {
+            Intent intent = new Intent(this, SpinnersActivity.class);
             startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 }
+
+
 
